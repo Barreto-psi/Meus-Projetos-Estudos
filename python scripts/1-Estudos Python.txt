@@ -1,0 +1,217 @@
+Estudos Python
+
+comandos são funções e funções tem que ter parênteses ( )
+
+Funções :
+ print('Olá, Mundo!')
+	mensagens precisam estar entre aspas 'simples' ou "duplas"
+
+	operações com números são SEM aspas '5'
+	ex: print(3+2)
+	5
+
+	junção mensagens com + ou ,
+
+	toda Variável é um objeto p/ o python e recebem valor. símbolo " = "
+ 
+ Input entra informação 
+ 	ex: nome = input('qual o seu nome?')
+
+{} .format(variavel)  substitui colchetes
+	nome = input('Digite seu nome')
+	print('É um prazer de conhecer, {}!'.format(nome))
+
+tipos primitivos Numeros
+	int = inteiros ex:7, -4, 0, 9875
+	float = reais ou de ponto flutuante ex: 4.5, 0.075, -15.225, 7.0
+	bool = valores logicos ou boleanos ex: True False (quando booleanos primeira letra maiuscula)
+	str = valores caracteres ou string ex:'Olá', '7.5', ''
+
+#operações aritiméticas
+ adição +
+ subtração - 
+ multiplicação *
+ divisão /
+ potência **  outra forma pow(4, 2) 4²
+ divisão inteira //
+ resto da divisão %
+ raiz quadrada de um numero é igual criar a potencia por meio 1/2 ex: 81**(1/2) == 9 ; raiz cubica **(1/3) 
+ 	ou
+ 		from math import sqrt
+ simbolo de igual na programação == (dois iguais)
+ 	### Ordem de precedencia dos operadores
+	1 () 2** 3*,/,//,%  4+,-
+	print("="*20) pode replicar strings
+
+**** Alinhamento no print simbolo (:)
+ nome = input('Qual é o seu nome?')
+ print('Prazer em te conhecer {}!'.format(nome))
+ print('Prazer em te conhecer {:=^20}!'.format(nome))
+centralizar ^, alinhar a direita >, à esquerda <,
+
+*juntar linha print , end=' ' ex: ps: dentro das aspas pode ter algum simbolo pra indicar a nova linha '>>>', '->' 
+	print('A soma é {}, o produto é {} e a divisão é {:.3f}'.format(s, m, d), end=' ')
+
+*quebrar linha \n ex:
+	print('A soma é {}, \n o produto é {} \n e a divisão é {:.3f}'.format(s, m, d))
+---Ps: controlar casas decimais {:.2f}
+
+### Função 'import' - comando de inclusão
+	import + biblioteca = importa toda a biblioteca 
+	from + bilioteca + import + item especifico = apenas a função que eu escolher
+	ex.:import random
+		num = random.randint(1, 10)
+
+		 import math -toda a biblioteca math
+		 from math import sqrt - so a raiz quadrada
+		 from math import sqrt, pow - duas funcionalidades da biblioteca
+		ps; importar a funcionalidade da biblioteca deixa o codigo mais otimizado, do que importar a biblioteca inteira
+
+====== Bibliotecas:
+	math - matemática - funcionalidade 
+		ceil-arredonda pra cima 
+		floor- arredonta pra baixo
+		trunc - truncar, eliminar da virgula pra frente sem arredondar
+		pow - potencia
+		sqrt - raiz quadrada
+		factorial - factorial
+	Para importar Bibliotecas ir no site oficial do Python
+	time - funcao sleep espera segundos
+
+LISTA
+	para criar lista tem que deixar o valor da variavel entre colchetes
+	ex: lista = [] desafio 019
+
+***Manipulando cadeia de textos 09
+			#manipulando cadeia de textos
+			frase = 'Curso em Video python'
+			#           FATIAMENTO  
+			# #print(frase[9:13]) # Vide  #vai do 9 ao 12 o 13 n conta, sempre uma a menos no final
+			#print(frase[9:21:2]) # Vdeopto vai pulando 2 caracteres
+			#print(frase[:5]) #cruso #começa do inicio ate o numero
+			#print(frase[15:]) #python # do caractere ao final
+			#print(frase[9::3]) #Veph #começa no nove vai ate o final e pulando 3
+			#
+			#           ANÁLISE
+			len(frase) = tamanho da frase
+			frase = frase.split()
+			nome[len(frase)-1] = para achar a ultima palavra da frase
+			frase.count('o', 0, 13 ) #contar quantas vezes aparece a letra maiuscula ou minuscula 
+			#                               de acordo com o range colocado 0 a 12 ja que o 13 n conta
+			frase.find('deo') #mostra onde iniciou posicao 11
+			frase.find('Android') #mostra -1 porque n possui esse trecho na frase, 
+			#                      sempre que aparecer o -1 e por nao existe o q esta procurando
+			# existe tambem o rfind = que procura a partir do lado direito ou seja de maneira inversa
+			'Curso'in frase # = resposta true #indica se existe ou n a palavra dentro da frase
+			#
+			#           TRANSFORMAÇÃO
+			frase.replace('python', 'Android') # trocar uma palavra do texto por outra de fora
+			pra fazer a altera tenho que usar como valor da variavel
+			ex: frase = frase.replace('python', 'Android')
+
+			frase.upper() #ficar em maiusculo
+			frase.lower() #ficar em minusculo
+			frase.capitalize() #todos os caracteres pra minusculos e so a primeira letra ficara em maiuscula
+			frase.title() #a primeira letra de todas as palavras do range em maiusculo
+			###
+			#frase = '   Aprenda Python  '
+			frase.strip() #remove espacos inuteis do comeco e do fim da string 
+			#              sendo a primeira letra numa nova contagem valendo 0
+			frase.rstrip() #remove so o lado direito ou seja os espacos finais
+			frase.lstrip() #remove o lado esquerdo ou seja espacos iniciais
+			#
+			#           DIVISÃO
+			frase.split() #cria uma divisao nos espacos. 
+			#ou seja cada palavra recebe indexacao numerica nova, sempre comecando do 0
+			#cria uma lista com todas as palavras de uma cadeia de caracteres
+			#           JUNÇÃO
+			'-'.join(frase) #junta as frases com o caractere entre as aspas
+			#ex: curso-em-video-python
+
+string e imutavel a nao ser que se use uma funcao de transformacao e de atribuicao
+*posso unir comandos print(frase.upper().count('A')) #transforma todas as letras em upper e conta as repeticoes
+
+## para imprimir um texto longo inteiro colocalo emtre tres aspas duplas
+	ex: print("""texto longo""") ao inves de ir frase por frase
+
+& Metodos tem parênteses no final
+
+@@ Condicoes simples e compostas
+	if ******: = se = true
+	else ******: = senao = false
+	ex:
+	print('carro novo'if tempo<=3 else'carro Velho')
+	ou
+	if tempo<= 3:
+    	print('carro novo')
+	else:
+    	print('carro velho')
+	
+	and == continuacao da condicao , adicionar condicao
+	or  == condicao para and
+
+@@ condicoes aninhadas- estrutura condicional dentro de outra estrutura condicional
+	senao se , senao ; dentro de um 'if' quantos 'elif' quiser porem apenas um ou nenhum 'else'
+	if ****:
+	elif ***:
+	elif ***:
+	else ***:
+
+# Efeitos visuais
+	print('-='*11)	 
+
+# CORES NO Python
+	ANSI- escape sequence - contrabarra \033[ style; text; back m
+	ex \033[0;33;44 m
+	\033[m = para cancelar a cor
+	
+	style =  estilo
+	0 = none =nenhum
+	1 = Bold = negrito
+	4 = underline = sublinhado
+	7 = negative = inverter as configs entre letra e fundo
+	
+	text = texto
+	30 = branco
+	31 = vermelho
+	32 = verde
+	33 = amarelo
+	34 = azul
+	35 = roxo ou lilas
+	36 = azul claro, piscina
+	37 = cinza
+	
+	back = fundo 
+	40 = branco
+	41 = vermelho
+	42 = verde
+	43 = amarelo
+	44 = azul
+	45 = roxo ou lilas
+	46 = azul claro, piscina
+	47 = cinza
+
+
+conjunto de passos = algoritimo
+indentacao = bloco a frente tab ex:
+	@@@@@@@@
+		@@@@
+
+aninhar == estrutura dentro de outra
+
+* Estrutura de repeticao
+	-lacos
+		laco c no intervalo(1,10) = for c in range(1,10):
+		for c in range(1,10): #exemplo de andar e pegar a maca
+			passo
+			pula
+	for c in range(6, 0, -1):# tira um e fica regressivo
+    	print(c)
+	print('fim')
+		
+simplificando
+	operações matematicas
+		s += n  # s = s + n	
+
+---------------------------------------------------------------------------------------------------------------
+instalados: python.org
