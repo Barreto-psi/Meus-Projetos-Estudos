@@ -3,6 +3,7 @@ s = 0 # soma
 mv = 0 # mais velho
 qmm = 0 #quantidade mulheres menor 20
 for p in range(1, 5):
+    print('-='*5,'pesoa {}'.format(p),'=-'*5)
     nome = str(input('Nome da {}ª pessoa: '.format(p)))
     idade = int(input('Idade da {}ª pessoa: '.format(p)))
     sexo = str(input('Sexo da {}ª pessoa: M, F '.format(p))).upper()
@@ -20,6 +21,6 @@ for p in range(1, 5):
     elif sexo != 'M' and sexo !='F':
         print('Informacao invalida')
 media = s/4
-print('A idade media foi {:.f} anos de idade'.format(media))
+print('A idade media foi {:.1f} anos de idade'.format(media))
 print('Homem mais velho se chama {} e tem {} anos'.format(homem,mv))
 print('O numero de mulheres abaixo dos 20 anos e {}'.format(qmm))
