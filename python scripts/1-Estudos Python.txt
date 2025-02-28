@@ -200,7 +200,8 @@ indentacao = bloco a frente tab ex:
 aninhar == estrutura dentro de outra
 
 * Estrutura de repeticao
-	-lacos
+	for = para #estrutura de repeticao variavel de controle
+	-lacos 
 		laco c no intervalo(1,10) = for c in range(1,10):
 		for c in range(1,10): #exemplo de andar e pegar a maca
 			passo
@@ -208,6 +209,13 @@ aninhar == estrutura dentro de outra
 	for c in range(6, 0, -1):# tira um e fica regressivo
     	print(c)
 	print('fim')
+
+	while = enquanto #estrutura de repeticao com teste logico
+			c = 1
+		while c < 10:
+			print(c)
+			c += 1
+		print('fim')
 		
 simplificando
 	operações matematicas
