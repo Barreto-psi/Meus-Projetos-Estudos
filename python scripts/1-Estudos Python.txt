@@ -193,6 +193,7 @@ string e imutavel a nao ser que se use uma funcao de transformacao e de atribuic
 
 
 conjunto de passos = algoritimo
+end='' # ficar na horizontal
 indentacao = bloco a frente tab ex:
 	@@@@@@@@
 		@@@@
